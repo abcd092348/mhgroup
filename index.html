@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="MH Group Of Projects - Building ideas with purpose.">
+          content="MH Group Of Projects — A growing ecosystem of technology, robotics, digital business and innovation.">
+
+    <meta name="theme-color" content="#08090c">
 
     <title>MH Group Of Projects | Official Website</title>
 
     <link rel="stylesheet" href="styles.css">
-
     <script src="script.js" defer></script>
 </head>
 
@@ -26,7 +27,7 @@
     <!-- Header -->
     <header class="header" id="home">
 
-        <a href="#home" class="brand">
+        <a href="#home" class="brand" aria-label="MH Group home">
             <span class="logo">MH<span>.</span></span>
 
             <span class="brand-name">
@@ -36,7 +37,9 @@
         </a>
 
         <button class="menu-toggle" id="menuToggle"
-                aria-label="Toggle navigation">
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="navigation">
             ☰
         </button>
 
@@ -44,6 +47,7 @@
             <a href="#home">Home</a>
             <a href="#about">About Us</a>
             <a href="#projects">Our Projects</a>
+            <a href="#robotics">Robotics & AI</a>
             <a href="#vision">Our Vision</a>
             <a href="#contact" class="contact-link">Contact ↗</a>
         </nav>
@@ -68,7 +72,7 @@
                 <p class="hero-description">
                     MH Group Of Projects brings ambitious ideas
                     together across digital business, technology,
-                    e-commerce and emerging opportunities.
+                    e-commerce, robotics and emerging opportunities.
                     We believe in innovation, responsibility
                     and long-term growth.
                 </p>
@@ -90,13 +94,18 @@
 
             </div>
 
+            <!-- Main Robot Image -->
             <div class="hero-art">
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
+                <img
+                    class="hero-robot-image"
+                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=85"
+                    alt="Humanoid robot representing future technology"
+                    fetchpriority="high"
+                >
 
-                <div class="hero-logo">
-                    <span>MH</span>
-                    <small>GROUP OF PROJECTS</small>
+                <div class="hero-image-label">
+                    <span class="status-dot"></span>
+                    EXPLORING THE FUTURE
                 </div>
 
                 <div class="floating-card">
@@ -109,8 +118,12 @@
 
         <!-- Introduction -->
         <section class="intro section">
+
             <div>
-                <h2>ONE UMBRELLA.<br>
+                <p class="eyebrow">ONE CONNECTED ECOSYSTEM</p>
+
+                <h2>
+                    ONE UMBRELLA.<br>
                     <span>MULTIPLE DIRECTIONS.</span>
                 </h2>
             </div>
@@ -121,6 +134,7 @@
                 creating useful things and exploring new
                 opportunities.
             </p>
+
         </section>
 
         <!-- About Us -->
@@ -144,7 +158,7 @@
                 <p>
                     Our interests include online operations,
                     e-commerce, software development, digital
-                    communities and emerging technologies.
+                    communities, robotics and emerging technologies.
                     Each project has its own purpose while
                     sharing a common direction: learning,
                     improving and building responsibly.
@@ -184,6 +198,54 @@
             </div>
         </section>
 
+        <!-- Robotics and AI Showcase -->
+        <section class="robotics section" id="robotics">
+
+            <div class="robotics-content">
+                <p class="eyebrow">TECHNOLOGY & THE FUTURE</p>
+
+                <h2>
+                    Exploring The World Of<br>
+                    <span>Robotics & AI.</span>
+                </h2>
+
+                <p>
+                    Robotics and artificial intelligence are
+                    transforming how people work, communicate
+                    and solve problems. MH Group recognises
+                    the importance of exploring these fields
+                    and the opportunities they may create.
+                </p>
+
+                <a href="#projects" class="btn primary">
+                    Explore Our Initiatives ↘
+                </a>
+            </div>
+
+            <div class="robotics-gallery">
+
+                <figure class="robotics-photo robotics-photo-large">
+                    <img
+                        src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1000&q=85"
+                        alt="Humanoid robot"
+                        loading="lazy"
+                    >
+                    <figcaption>HUMANOID ROBOTICS</figcaption>
+                </figure>
+
+                <figure class="robotics-photo">
+                    <img
+                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=85"
+                        alt="Engineering and technology workspace"
+                        loading="lazy"
+                    >
+                    <figcaption>ENGINEERING & INNOVATION</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
         <!-- Projects -->
         <section class="projects section" id="projects">
 
@@ -196,31 +258,60 @@
                 of exploration within the MH ecosystem.
             </p>
 
+            <!-- Project Filters -->
             <div class="project-filters">
+
                 <button class="filter-btn active"
-                        data-filter="all">All Projects</button>
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true">
+                    All Projects
+                </button>
 
                 <button class="filter-btn"
-                        data-filter="technology">Technology</button>
+                        type="button"
+                        data-filter="technology"
+                        aria-pressed="false">
+                    Technology
+                </button>
 
                 <button class="filter-btn"
-                        data-filter="digital">Digital Business</button>
+                        type="button"
+                        data-filter="digital"
+                        aria-pressed="false">
+                    Digital Business
+                </button>
 
                 <button class="filter-btn"
-                        data-filter="community">Community</button>
+                        type="button"
+                        data-filter="community"
+                        aria-pressed="false">
+                    Community
+                </button>
+
             </div>
 
             <div class="project-grid">
 
+                <!-- Project 1 -->
                 <article class="project-card"
                          data-category="technology">
 
                     <div class="project-image chain-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=85"
+                            alt="Robot and future digital technology"
+                            loading="lazy"
+                        >
+
                         <span>01 / DIGITAL ASSETS</span>
                         <strong>SC</strong>
+
                     </div>
 
                     <div class="project-info">
+
                         <small>Digital Finance Concept</small>
                         <h3>SolnityChain</h3>
 
@@ -233,19 +324,30 @@
                         <a href="#contact" class="project-link">
                             Discuss Project ↗
                         </a>
+
                     </div>
 
                 </article>
 
+                <!-- Project 2 -->
                 <article class="project-card"
                          data-category="community">
 
                     <div class="project-image network-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+                            alt="Professionals collaborating as a team"
+                            loading="lazy"
+                        >
+
                         <span>02 / NETWORKING</span>
                         <strong>ENC</strong>
+
                     </div>
 
                     <div class="project-info">
+
                         <small>Professional Community</small>
                         <h3>Elite Networkers Circle</h3>
 
@@ -258,19 +360,30 @@
                         <a href="#contact" class="project-link">
                             Discuss Project ↗
                         </a>
+
                     </div>
 
                 </article>
 
+                <!-- Project 3 -->
                 <article class="project-card"
                          data-category="digital">
 
                     <div class="project-image commerce-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85"
+                            alt="Online shopping and digital payment"
+                            loading="lazy"
+                        >
+
                         <span>03 / COMMERCE</span>
                         <strong>MH SHOP</strong>
+
                     </div>
 
                     <div class="project-info">
+
                         <small>Online Retail</small>
                         <h3>MH E-Commerce</h3>
 
@@ -283,19 +396,30 @@
                         <a href="#contact" class="project-link">
                             Discuss Project ↗
                         </a>
+
                     </div>
 
                 </article>
 
+                <!-- Project 4 -->
                 <article class="project-card"
                          data-category="technology">
 
                     <div class="project-image lab-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=85"
+                            alt="Engineering and digital technology"
+                            loading="lazy"
+                        >
+
                         <span>04 / DEVELOPMENT</span>
                         <strong>&lt;MH/&gt;</strong>
+
                     </div>
 
                     <div class="project-info">
+
                         <small>Software & Products</small>
                         <h3>MH Digital Lab</h3>
 
@@ -308,19 +432,30 @@
                         <a href="#contact" class="project-link">
                             Discuss Project ↗
                         </a>
+
                     </div>
 
                 </article>
 
+                <!-- Project 5 -->
                 <article class="project-card"
                          data-category="digital">
 
                     <div class="project-image data-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=85"
+                            alt="Electronic circuits and digital technology"
+                            loading="lazy"
+                        >
+
                         <span>05 / DATA OPERATIONS</span>
                         <strong>DATA → VALUE</strong>
+
                     </div>
 
                     <div class="project-info">
+
                         <small>Data Services Concept</small>
                         <h3>DataKarkhana</h3>
 
@@ -333,19 +468,30 @@
                         <a href="#contact" class="project-link">
                             Discuss Project ↗
                         </a>
+
                     </div>
 
                 </article>
 
+                <!-- Project 6 -->
                 <article class="project-card"
                          data-category="community">
 
                     <div class="project-image team-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+                            alt="Team collaboration and project planning"
+                            loading="lazy"
+                        >
+
                         <span>06 / COLLABORATION</span>
                         <strong>MH TEAM</strong>
+
                     </div>
 
                     <div class="project-info">
+
                         <small>Team Coordination</small>
                         <h3>MH Team</h3>
 
@@ -358,6 +504,7 @@
                         <a href="#contact" class="project-link">
                             Discuss Project ↗
                         </a>
+
                     </div>
 
                 </article>
@@ -411,6 +558,7 @@
                 </div>
 
             </div>
+
         </section>
 
         <!-- Contact -->
@@ -428,7 +576,7 @@
                 Get in touch with MH Group Of Projects.
             </p>
 
-            <!-- Replace this placeholder email with your real email -->
+            <!-- Replace with your real email address -->
             <a class="btn primary"
                href="mailto:YOUR-EMAIL@example.com?subject=MH%20Group%20Inquiry">
                 Start A Conversation ↗
@@ -456,12 +604,14 @@
         </p>
 
         <div class="footer-bottom">
+
             <span>
                 © <span id="year"></span>
                 MH Group Of Projects.
             </span>
 
             <a href="#home">Back To Top ↑</a>
+
         </div>
 
     </footer>
